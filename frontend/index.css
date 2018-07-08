@@ -7,7 +7,7 @@
     z-index:999;
     position: absolute;
     left:46%;
-    padding: 10px 35px;
+    padding: 10px 50px;
 }
 
 #resume{
@@ -28,6 +28,21 @@
 }
 
 .fa{
+    z-index: 998;
     padding: 10px;
     color: whitesmoke;
+}
+
+.btn-link{
+    z-index: 997;
+}
+
+button.btn-link.btn.btn-outline-light {
+    padding: 1px 3px;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
