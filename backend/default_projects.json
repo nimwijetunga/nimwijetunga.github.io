@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "name": "Infinity",
+            "desc": "2-D Arena Style RPG",
+            "url": "https://github.com/nimwijetunga/Infinity",
+            "img": "res/Infinity.png"
+        },
+        {
+            "name": "Present Easy",
+            "desc": "Web App to allow users to get images for a slideshow based on the sentiment of their presenter notes",
+            "url": "https://github.com/nimwijetunga/PresentEasy",
+            "img": "res/PresentEasy.png"
+        },
+        {
+            "name": "Princeton Algorithms",
+            "desc": "Coursera Princeton Algorithms Part 1 Course ",
+            "url": "https://github.com/nimwijetunga/Princeton-Algorithms-Part-1",
+            "img": "res/Princeton-Algorithms-Part-1.png"
+        },
+        {
+            "name": "Study Space",
+            "desc": "Ryerson Hacks Project ",
+            "url": "https://github.com/nimwijetunga/StudySpace",
+            "img": "res/StudySpace.png"
+        }
+    ]
+}

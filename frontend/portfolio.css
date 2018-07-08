@@ -1,16 +1,37 @@
-.card {
+#template{
+    display: none;
+}
+
+.card{
     position: absolute !important;
-    top: 25%;
     opacity: 94;
     background: rgba(0,0,0,0)!important;
 }
 
-.c1{
-    left:27%;
+#c1-top {
+    top: 10%;
+    left:22%;
 }
 
-.c2{
+#c2-top {
+    top: 10%;
     left:57%;
+}
+
+#c1-bottom{
+    top: 60%;
+    left:22%;
+}
+
+#c2-bottom{
+    top: 60%;
+    left:57%;
+}
+
+a.view-proj.btn.btn-outline-light:hover {
+    border-color: black;
+    background: black;
+    color: whitesmoke;
 }
 
 .home{
@@ -34,4 +55,8 @@
 .port-img:hover{
     -webkit-filter: blur(0px);
     filter: blur(0px);
+}
+
+#particles-js {
+    height: 100%;
 }

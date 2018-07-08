@@ -28,13 +28,8 @@
 }
 
 .fa{
-    z-index: 998;
     padding: 10px;
     color: whitesmoke;
-}
-
-.btn-link{
-    z-index: 997;
 }
 
 button.btn-link.btn.btn-outline-light {
