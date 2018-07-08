@@ -1,0 +1,36 @@
+.card {
+    position: absolute !important;
+    top: 25%;
+    opacity: 94;
+    background: rgba(0,0,0,0)!important;
+}
+
+.c1{
+    left:27%;
+}
+
+.c2{
+    left:57%;
+}
+
+.home{
+    z-index:999;
+    position: absolute;
+    left:3%;
+    top:3%;
+}
+
+.card-title, .card-text{
+    color: #f8f9fa
+}
+
+.port-img{
+    transition: filter 0.5s ease;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.port-img:hover{
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
