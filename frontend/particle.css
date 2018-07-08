@@ -9,42 +9,7 @@ canvas {
     display: block;
     vertical-align: bottom;
 }
-
-.wrapper {
-    text-align: center;
-}
-
-/*------Buttons-----*/
-#resume, #portfolio{
-    z-index:999;
-    position: absolute;
-    left:46%;
-    padding: 10px 35px;
-}
-
-#resume{
-    top: 50%;
-}
-
-#portfolio{
-    top: 40%;
-}
-
-/*--------Icons-------*/
-.icons{
-    z-index:999;
-    position: absolute;
-    font-size: 20px;    
-    top:60%;
-    left:46%;
-}
-
-.fa{
-    padding: 10px;
-    color: whitesmoke;
-}
-
-  
+ 
 /* ---- particles.js container ---- */
   
 #particles-js {
