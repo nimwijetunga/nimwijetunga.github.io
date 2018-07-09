@@ -3,9 +3,6 @@ const app = express();
 const projects = require('./projects.js');
 const default_data = require('./default_projects.json');
 
-
-require('dotenv').config();
-
 async function send_profile(req, res) {
     var project_list = await projects.get_projects().catch((err) => {
         return default_data;

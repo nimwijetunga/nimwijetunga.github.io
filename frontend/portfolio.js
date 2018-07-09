@@ -2,25 +2,12 @@ $(document).ready(function(){
     list_projects();
 });
 
-function get_uri(){
-    let host = window.location.hostname;
-    let port = "";
-    var protocol = "https://"
-    if(window.location.port != ""){
-        port = ":" + window.location.port;
-        protocol = "http://"
-    }
-    return (protocol + host + port);
-}
-
 function get_projects(){
-    let uri = get_uri();
-    let url = uri + '/api/portfolio';
-    console.log(url);
+    let url = 'https://nim-wijetunga.lib.id/get-profile-data@0.0.0/';
     return new Promise(function (resolve, reject) {
         $.get(url, function(projects) {
             if(!projects) reject(false);
-            projects = JSON.parse(projects);
+            projects = JSON.parse(JSON.stringify(projects));
             if(projects['data']) resolve(projects);
             else reject(false);
         });
