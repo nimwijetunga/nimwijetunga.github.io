@@ -16,7 +16,7 @@ async function send_profile(req, res) {
 }
 
 
-app.use(express.static('./frontend'))
+app.use(express.static('./docs'))
 
 app.set('port', (process.env.PORT || 3000));
 

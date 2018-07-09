@@ -1,0 +1,110 @@
+.wrapper {
+    text-align: center;
+}
+
+/*------Name-------*/
+.name{
+    z-index:999;
+    position: absolute;
+    color: whitesmoke;
+    top:10%;
+    font-family:'Century Gothic';
+}
+
+.first{
+    left:20%;
+}
+
+h3.last {
+    position: relative;
+    margin-left: 180px;
+    margin-top: -30px;
+    color: grey;
+}
+
+h1.first{
+    position: relative;
+    margin-left: -40px;
+}
+
+/*-------Profile------*/
+.profile{
+    z-index:999;
+    position: absolute;
+    font-family: 'courier';
+    margin-top: 142px;
+    margin-left: 30px;
+    color: whitesmoke;
+}
+
+#carrat{
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: gray;
+}
+
+#npm{
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: yellow;
+}
+
+#install{
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    color:whitesmoke;
+}
+
+#exec{
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: yellow;
+}
+
+h4 {
+    font-size: 18px !important;
+}
+
+/*------Buttons-----*/
+#resume, #portfolio{
+    z-index:999;
+    position: absolute;
+    left:46%;
+    padding: 10px 50px;
+}
+
+#resume{
+    top: 50%;
+}
+
+#portfolio{
+    top: 40%;
+}
+
+/*--------Icons-------*/
+.icons{
+    z-index:999;
+    position: absolute;
+    font-size: 20px;    
+    top:60%;
+    left:46%;
+}
+
+.fa{
+    padding: 10px;
+    color: whitesmoke;
+}
+
+button.btn-link.btn.btn-outline-light {
+    padding: 1px 3px;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
