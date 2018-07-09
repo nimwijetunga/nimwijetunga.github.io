@@ -15,10 +15,9 @@
   "dependencies": {
     "append-query": "^2.0.1",
     "cors": "^2.8.4",
-    "dotenv": "^6.0.0",
+    "env.json": "^2.0.1",
     "express": "^4.16.3",
     "fs": "0.0.1-security",
-    "mustache-express": "^1.2.7",
     "nodemon": "^1.17.5",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
