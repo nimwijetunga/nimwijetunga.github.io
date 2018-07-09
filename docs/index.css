@@ -32,7 +32,7 @@ h1.first{
     z-index:999;
     position: absolute;
     font-family: 'courier';
-    margin-top: 142px;
+    top:10em;
     margin-left: 30px;
     color: whitesmoke;
 }
