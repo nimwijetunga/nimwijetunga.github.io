@@ -36,9 +36,10 @@ h1.first {
     font-family: 'courier';
     margin-left: 30px;
     color: whitesmoke;
+    top:11em;
 }
 
-@media only screen and (max-height: 3000px) and (min-height: 900px) {
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
     h1.first {
         font-size: 5em;
         margin-top: -10%;
@@ -90,12 +91,6 @@ h1.first {
         font-size: 40px;
         margin-left: 5px;
         margin-right: 5px;
-    }
-}
-
-@media only screen and (max-height: 732px) {
-    .profile {
-        top: 10em;
     }
 }
 
