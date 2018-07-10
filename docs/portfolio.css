@@ -14,17 +14,18 @@
 
 #c1-top {
     top: 15%;
-    left: 15%;
+    left: 20%;
 }
 
 #c2-top {
     top: 15%;
     left: 57%;
+    height: 295px !important;
 }
 
 #c1-bottom {
     top: 60%;
-    left: 15%;
+    left: 20%;
 }
 
 #c2-bottom {
