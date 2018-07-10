@@ -23,4 +23,3 @@ app.set('port', (process.env.PORT || 3000));
 app.get('/api/portfolio', [send_profile])
 
 app.listen(3000, () => console.log('App started on port: ' + app.get('port')))
-

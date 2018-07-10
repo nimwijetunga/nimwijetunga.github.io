@@ -3,16 +3,17 @@
 }
 
 /*------Name-------*/
-.name{
-    z-index:999;
+
+.name {
+    z-index: 999;
     position: absolute;
     color: whitesmoke;
-    top:10%;
-    font-family:'Century Gothic';
+    top: 10%;
+    font-family: 'Century Gothic';
 }
 
-.first{
-    left:20%;
+.first {
+    left: 20%;
 }
 
 h3.last {
@@ -22,43 +23,101 @@ h3.last {
     color: grey;
 }
 
-h1.first{
+h1.first {
     position: relative;
     margin-left: -40px;
 }
 
 /*-------Profile------*/
-.profile{
-    z-index:999;
+
+.profile {
+    z-index: 999;
     position: absolute;
     font-family: 'courier';
-    top:15em;
     margin-left: 30px;
     color: whitesmoke;
 }
 
-#carrat{
+@media only screen and (max-height: 1900px) and (min-height: 900px) {
+    h1.first {
+        font-size: 5em;
+        margin-top: -10%;
+        margin-left: -70px;
+    }
+    h3.last {
+        font-size: 3em;
+        margin-left: 398px;
+        margin-top: -30px;
+        left:-5%;
+        color: grey;
+    }
+    #resume, #portfolio {
+        left: 36% !important;
+        font-size: 62px;
+    }
+    .profile {
+        top: 17em;
+    }
+
+    .fa {
+        padding: 13px;
+        font-size: 44px !important;
+    }
+
+    .icons{
+        left:40% !important;
+    }
+
+    div#carrat {
+        font-size: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    div#npm {
+        font-size: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    div#install {
+        font-size: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    div#exec {
+        font-size: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (max-height: 732px) {
+    .profile {
+        top: 10em;
+    }
+}
+
+#carrat {
     float: left;
     margin-left: 3px;
     margin-right: 3px;
     color: gray;
 }
 
-#npm{
+#npm {
     float: left;
     margin-left: 3px;
     margin-right: 3px;
     color: yellow;
 }
 
-#install{
+#install {
     float: left;
     margin-left: 3px;
     margin-right: 3px;
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
-#exec{
+#exec {
     float: left;
     margin-left: 3px;
     margin-right: 3px;
@@ -70,31 +129,33 @@ h4 {
 }
 
 /*------Buttons-----*/
-#resume, #portfolio{
-    z-index:999;
+
+#resume, #portfolio {
+    z-index: 999;
     position: absolute;
-    left:46%;
+    left: 46%;
     padding: 10px 50px;
 }
 
-#resume{
+#resume {
     top: 50%;
 }
 
-#portfolio{
+#portfolio {
     top: 40%;
 }
 
 /*--------Icons-------*/
-.icons{
-    z-index:999;
+
+.icons {
+    z-index: 999;
     position: absolute;
-    font-size: 20px;    
-    top:60%;
-    left:46%;
+    font-size: 20px;
+    top: 60%;
+    left: 46%;
 }
 
-.fa{
+.fa {
     padding: 10px;
     color: whitesmoke;
 }
@@ -103,8 +164,8 @@ button.btn-link.btn.btn-outline-light {
     padding: 1px 3px;
 }
 
-.divider{
-    width:5px;
-    height:auto;
-    display:inline-block;
+.divider {
+    width: 5px;
+    height: auto;
+    display: inline-block;
 }
