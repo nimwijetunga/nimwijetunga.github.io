@@ -1,58 +1,66 @@
-#template{
+#template {
     display: none;
 }
 
-.card{
+.card {
     position: absolute !important;
     opacity: 94;
-    background: rgba(0,0,0,0)!important;
+    width: 317px !important;
+    background: rgba(0, 0, 0, 0)!important;
+    border: 1px solid rgba(105, 105, 105, 8.125) !important;
+    padding-top: 18px !important;
+    margin-top: -24px !important;
 }
 
 #c1-top {
-    top: 10%;
-    left:22%;
+    top: 15%;
+    left: 15%;
 }
 
 #c2-top {
-    top: 10%;
-    left:57%;
+    top: 15%;
+    left: 57%;
 }
 
-#c1-bottom{
+#c1-bottom {
     top: 60%;
-    left:22%;
+    left: 15%;
 }
 
-#c2-bottom{
+#c2-bottom {
     top: 60%;
-    left:57%;
+    left: 57%;
 }
 
 a.view-proj.btn.btn-outline-light:hover {
     border-color: black;
-    background: black;
+    background: transparent;
     color: whitesmoke;
 }
 
-.home{
-    z-index:999;
+.home {
+    z-index: 999;
     position: absolute;
-    left:3%;
-    top:3%;
+    font-size: 18px !important;
+    left: 3%;
+    top: 3%;
+    font-family: inherit;
 }
 
-.card-title, .card-text{
+.card-title, .card-text {
     color: #f8f9fa
 }
 
-.port-img{
+.port-img {
     transition: filter 0.5s ease;
     -webkit-filter: blur(2px);
     filter: blur(2px);
     position: relative;
     padding: 0px 20px;
+    background-color: rgba(9, 41, 52, 0.5) !important;
 }
-.port-img:hover{
+
+.port-img:hover {
     -webkit-filter: blur(0px);
     filter: blur(0px);
 }
@@ -61,11 +69,21 @@ a.view-proj.btn.btn-outline-light:hover {
     height: 100%;
 }
 
+@media only screen and (max-height: 900px) and (min-height: 800px) {
+    #c1-top {
+        top: 15%;
+        left: 5%;
+    }
+    #c1-bottom {
+        top: 60%;
+        left: 5%;
+    }
+}
+
 @media only screen and (max-height: 3000px) and (min-height: 900px) {
     .card {
         width: 400px !important;
     }
-
     #c1-top {
         top: 18%;
         left: 8%;
@@ -82,16 +100,13 @@ a.view-proj.btn.btn-outline-light:hover {
         top: 60%;
         left: 54%;
     }
-
-    .card-title{
+    .card-title {
         font-size: xx-large !important;
     }
-
-    .view-proj{
+    .view-proj {
         font-size: 32px !important;
     }
-
-    .home{
+    .home {
         font-size: 43px !important;
     }
 }
