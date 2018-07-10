@@ -55,6 +55,9 @@ h1.first {
         left: 36% !important;
         font-size: 62px;
     }
+    #resume{
+        width: 337px;
+    }
     .profile {
         top: 17em;
     }
