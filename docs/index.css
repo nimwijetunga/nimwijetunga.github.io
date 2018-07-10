@@ -38,7 +38,7 @@ h1.first {
     color: whitesmoke;
 }
 
-@media only screen and (max-height: 1900px) and (min-height: 900px) {
+@media only screen and (max-height: 3000px) and (min-height: 900px) {
     h1.first {
         font-size: 5em;
         margin-top: -10%;

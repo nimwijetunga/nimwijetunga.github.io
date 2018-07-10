@@ -60,3 +60,38 @@ a.view-proj.btn.btn-outline-light:hover {
 #particles-js {
     height: 100%;
 }
+
+@media only screen and (max-height: 3000px) and (min-height: 900px) {
+    .card {
+        width: 400px !important;
+    }
+
+    #c1-top {
+        top: 18%;
+        left: 8%;
+    }
+    #c2-top {
+        top: 18%;
+        left: 54%;
+    }
+    #c1-bottom {
+        top: 60%;
+        left: 8%;
+    }
+    #c2-bottom {
+        top: 60%;
+        left: 54%;
+    }
+
+    .card-title{
+        font-size: xx-large !important;
+    }
+
+    .view-proj{
+        font-size: 32px !important;
+    }
+
+    .home{
+        font-size: 43px !important;
+    }
+}
