@@ -92,6 +92,7 @@ a.view-proj.btn.btn-outline-light:hover {
     #c2-top {
         top: 18%;
         left: 54%;
+        height: 379px !important;
     }
     #c1-bottom {
         top: 60%;
