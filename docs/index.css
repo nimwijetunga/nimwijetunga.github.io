@@ -39,7 +39,7 @@ h1.first {
     top:11em;
 }
 
-@media only screen and (max-width: 1000px) and (min-width: 0px) {
+@media only screen and (max-width:1000px) and (min-width: 0px) {
     h1.first {
         font-size: 5em;
         margin-top: -10%;
@@ -52,12 +52,15 @@ h1.first {
         left:-5%;
         color: grey;
     }
-    #resume, #portfolio {
+    #resume, #portfolio, #stats {
         left: 36% !important;
         font-size: 62px;
     }
     #resume{
-        width: 337px;
+        width: 337px !important;
+    }
+    #stats{
+        width: 337px !important;
     }
     .profile {
         top: 17em;
@@ -128,7 +131,7 @@ h4 {
 
 /*------Buttons-----*/
 
-#resume, #portfolio {
+#resume, #portfolio, #stats {
     z-index: 999;
     position: absolute;
     left: 46%;
@@ -137,10 +140,19 @@ h4 {
 
 #resume {
     top: 50%;
+    width: 164px;
 }
 
 #portfolio {
     top: 40%;
+}
+
+#stats{
+    top:30%;
+}
+
+.stats {
+    width: 164px;
 }
 
 /*--------Icons-------*/

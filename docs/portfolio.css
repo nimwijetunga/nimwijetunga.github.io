@@ -34,7 +34,7 @@
 }
 
 a.view-proj.btn.btn-outline-light:hover {
-    border-color: black;
+    border-color: transparent;
     background: transparent;
     color: whitesmoke;
 }
