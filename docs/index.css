@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
 /*------Name-------*/
 
 .name {
@@ -39,11 +44,11 @@ h1.first {
     top:11em;
 }
 
-@media only screen and (min-width: 1900px) {
+/* @media only screen and (min-width: 1900px) {
     .profile {
         top: 18em;
     }
-}
+} */
 @media only screen and (max-width:1000px) and (min-width: 0px) {
     h1.first {
         font-size: 5em;
@@ -61,7 +66,11 @@ h1.first {
         left: 36% !important;
         font-size: 62px;
     }
+    #portfolio{
+        top: 11em !important;
+    }
     #resume{
+        top: 14em !important;
         width: 337px !important;
     }
     #stats{
@@ -144,16 +153,16 @@ h4 {
 }
 
 #resume {
-    top: 50%;
+    top: 27em;
     width: 164px;
 }
 
 #portfolio {
-    top: 40%;
+    top: 22em;
 }
 
 #stats{
-    top:30%;
+    top:17em;
 }
 
 .stats {
@@ -166,7 +175,7 @@ h4 {
     z-index: 999;
     position: absolute;
     font-size: 20px;
-    top: 60%;
+    top:26em;
     left: 46%;
 }
 
