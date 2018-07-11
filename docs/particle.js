@@ -26,19 +26,15 @@ particlesJS("particles-js",
     }, "retina_detect": true
   });
 
-var height = $(document).height();   // returns height of browser viewport
-var width = $(document).width();   // returns height of browser viewport
 
 
 var $window = $(window);
 $window.resize(function () {
+  var height = $(document).height();   // returns height of browser viewport
+  var width = $(document).width();   // returns height of browser viewport
   console.log("Here");
   $('div#particles-js').css('width', width);
   $('div#particles-js').css('height', height);
 });
-
-
-$('div#particles-js').css('width', width);
-$('div#particles-js').css('height', height);
 
 
