@@ -36,6 +36,5 @@ var config = {
     }
 }
 
-console.log(config);
 var ctx = document.getElementById('lang_chart').getContext('2d');
 var myChart = new Chart(ctx, config);
