@@ -1,18 +1,18 @@
 var config = {
     type: 'doughnut',
     data: {
-        labels: ["JavaScript", "Java", "C++/C", "HTML/CSS", "PHP", "SQL/NoSQL"],
+        labels: ["JavaScript", "Java", "C++/C", "PHP", "SQL/NoSQL"],
         datasets: [
             {
-                backgroundColor: ["#3cba9f", "#8e5ea2", "#3e95cd", "#FF4500", "#c45850", "#D3D3D3"],
-                data: [0.25, 0.25, 0.10, 0.10, 0.20, 0.10]
+                backgroundColor: ["#3cba9f", "#8e5ea2", "#FF4500", "#c45850", "#D3D3D3"],
+                data: [0.25, 0.25, 0.20, 0.20, 0.10]
             }
         ]
     },
     options: {
         title: {
             display: true,
-            text: 'Languages (Experience Using)',
+            text: 'Proficient Languages (Experience Using)',
             fontColor: '#f5f5f5',
             fontSize: 18
 
