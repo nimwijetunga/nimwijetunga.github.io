@@ -39,6 +39,9 @@ h1.first {
     top:11em;
 }
 
+@media only screen and (min-width: 1900px) {
+
+}
 @media only screen and (max-width:1000px) and (min-width: 0px) {
     h1.first {
         font-size: 5em;
