@@ -5,7 +5,7 @@ var config = {
         datasets: [
             {
                 backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                data: [60, 90, 30, 80, 50]
+                data: [50, 90, 10, 80, 50]
             }
         ]
     },
