@@ -1,7 +1,7 @@
 var config = {
     type: 'doughnut',
     data: {
-        labels: ["JavaScript", "Java", "C++/C", "PHP", "SQL/NoSQL"],
+        labels: ["JavaScript", "Java", "C/C++", "PHP", "SQL/NoSQL"],
         datasets: [
             {
                 backgroundColor: ["#3cba9f", "#8e5ea2", "#FF4500", "#c45850", "#D3D3D3"],
