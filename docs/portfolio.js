@@ -6,6 +6,7 @@ function get_projects(){
     let url = 'https://nim-wijetunga.lib.id/get-profile-data@0.0.0/';
     return new Promise(function (resolve, reject) {
         $.get(url, function(projects) {
+            $( ".container" ).hide();
             if(!projects) reject(false);
             projects = JSON.parse(JSON.stringify(projects));
             if(projects['data']) resolve(projects);
