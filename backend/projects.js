@@ -4,14 +4,6 @@ const env = require('env.json');
 
 env.envSetup()
 
-
-var projects = {
-    'PresentEasy': 'Present Easy',
-    'Infinity': 'Infinity',
-    'StudySpace': 'Study Space',
-    'Princeton-Algorithms-Part-1': 'Princeton Algorithms'
-};
-
 async function get_profile() {
 
     let uri = 'https://api.github.com/user/repos';
@@ -33,8 +25,12 @@ async function get_profile() {
 }
 
 module.exports = {
-    get_projects: async function () {
-        var profile = await get_profile().catch((err) => {return err});
+    get_projects: async function (projects) {
+        var profile = await get_profile().catch((err) => {return {error:err}});
+        if(profile.error){
+            Promise.reject(profile.error);
+            return;
+        }
         var projects_filt = {};
         projects_filt['projects'] = []
         var keys = Object.keys(projects);
