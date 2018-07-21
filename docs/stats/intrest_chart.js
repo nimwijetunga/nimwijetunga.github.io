@@ -26,14 +26,7 @@ var config = {
             }]
         },
         tooltips: {
-            titleFontSize: 14,
-            bodyFontSize: 14,
-            callbacks: {
-                title: function (tooltipItem, data) {
-                    return data['labels'][tooltipItem[0]['index']];
-                },
-                label: function (tooltipItem, data) {}
-            }
+            enabled:false
         },
         legend: { display: false },
         title: {
