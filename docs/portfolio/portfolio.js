@@ -43,6 +43,7 @@ async function list_projects() {
     var class2 = ['c1', 'c2'];
     var class3 = ['top', 'top', 'bottom', 'bottom']
     for (var i in projects['projects']) {
+        projects['projects'][i]['img'] = '../' + projects['projects'][i]['img'];
         let id_str = class2[i % 2] + "-" + class3[i];
         projects['projects'][i]['id'] = id_str;
     }
