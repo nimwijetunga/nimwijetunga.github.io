@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -41,14 +41,9 @@ h1.first {
     font-family: 'courier';
     margin-left: 30px;
     color: whitesmoke;
-    top:11em;
+    top: 11em;
 }
 
-/* @media only screen and (min-width: 1900px) {
-    .profile {
-        top: 18em;
-    }
-} */
 @media only screen and (max-width:1000px) and (min-width: 0px) {
     h1.first {
         font-size: 5em;
@@ -59,36 +54,33 @@ h1.first {
         font-size: 3em;
         margin-left: 398px;
         margin-top: -30px;
-        left:-5%;
+        left: -5%;
         color: grey;
     }
     #resume, #portfolio, #stats {
         left: 36% !important;
         font-size: 62px;
     }
-    #portfolio{
+    #portfolio {
         top: 11em !important;
     }
-    #resume{
+    #resume {
         top: 14em !important;
         width: 337px !important;
     }
-    #stats{
+    #stats {
         width: 337px !important;
     }
     .profile {
         top: 17em;
     }
-
     .fa {
         padding: 13px;
         font-size: 44px !important;
     }
-
-    .icons{
-        left:40% !important;
+    .icons {
+        left: 40% !important;
     }
-
     div#carrat {
         font-size: 40px;
         margin-left: 5px;
@@ -161,8 +153,8 @@ h4 {
     top: 22em;
 }
 
-#stats{
-    top:17em;
+#stats {
+    top: 17em;
 }
 
 .stats {
@@ -175,7 +167,7 @@ h4 {
     z-index: 999;
     position: absolute;
     font-size: 20px;
-    top:26em;
+    top: 26em;
     left: 46%;
 }
 

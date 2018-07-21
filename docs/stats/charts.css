@@ -8,12 +8,14 @@
     z-index: 999;
     position: absolute;
     top:15%;
+    pointer-events: fill;
 }
 
 #intrest_chart{
     z-index: 999;
     position: absolute;
     top:70%;
+    pointer-events: fill;
 }
 
 .home {
