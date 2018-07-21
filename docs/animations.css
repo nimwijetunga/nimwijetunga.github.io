@@ -2,13 +2,17 @@
     animation: fadein 2s;
 }
 
-.profile{
+.profile {
     animation: fadein 3s;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .first {
@@ -43,38 +47,38 @@
     }
 }
 
-.profileItem::after {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    background-color: whitesmoke;
-    vertical-align: top;
-    width: 6px;
-    height: 18px;
-    -webkit-animation: blink 1s step-end infinite;
-    animation: blink 1s step-end infinite;
-}
-
-@-webkit-keyframes blink {
-    0% {
-        opacity: 1.0;
+@media only screen and (min-width:1000px) {
+    .profileItem::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-color: whitesmoke;
+        vertical-align: top;
+        width: 6px;
+        height: 18px;
+        -webkit-animation: blink 1s step-end infinite;
+        animation: blink 1s step-end infinite;
     }
-    50% {
-        opacity: 0.0;
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
     }
-    100% {
-        opacity: 1.0;
-    }
-}
-
-@keyframes blink {
-    0% {
-        opacity: 1.0;
-    }
-    50% {
-        opacity: 0.0;
-    }
-    100% {
-        opacity: 1.0;
+    @keyframes blink {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
     }
 }
