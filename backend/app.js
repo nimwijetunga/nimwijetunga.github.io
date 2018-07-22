@@ -25,7 +25,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json())
 
-app.use(express.static('./docs'))
+app.use(express.static('./docs', {
+    extensions: ['html', 'htm']
+}))
 
 app.set('port', (process.env.PORT || 3000));
 
