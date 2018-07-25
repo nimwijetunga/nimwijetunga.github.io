@@ -1,15 +1,13 @@
 const appendQuery = require('append-query')
 const request = require('request-promise');
-const env = require('env.json');
-
-env.envSetup()
+require('dotenv').config()
 
 async function get_profile() {
 
     let uri = 'https://api.github.com/user/repos';
 
     let params = {
-        access_token: env.envGet('github_key')
+        access_token: process.env.github_key
     };
 
     let url = appendQuery(uri, params);
