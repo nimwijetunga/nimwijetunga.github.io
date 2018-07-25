@@ -4,8 +4,9 @@
   "description": "Personal Website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/app.js"
+    "start": "node backend/app.js",
+    "test": "mocha uitests/bootstrap.js --timeout 15000 --recursive uitests",
+    "server": "http-server src"
   },
   "keywords": [
     "npm"
@@ -15,11 +16,15 @@
   "dependencies": {
     "append-query": "^2.0.1",
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
     "cors": "^2.8.4",
     "env.json": "^2.0.1",
     "express": "^4.16.3",
     "fs": "0.0.1-security",
+    "http-server": "^0.10.0",
+    "mocha": "^4.0.1",
     "nodemon": "^1.17.5",
+    "puppeteer": "^0.13.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
   }
