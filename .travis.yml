@@ -7,5 +7,5 @@ cache:
 before_script:
   - npm install
   - node backend/app.js &
-# script:
-#   - npm test
+script:
+  - npm test
