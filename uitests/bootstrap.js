@@ -12,13 +12,16 @@ const opts = {
 };
 
 // expose variables
-before (async function () {
+before(async function () {
   global.assert = assert;
-  global.browser = await puppeteer.launch(opts);
+  global.browser = await puppeteer.launch({
+    // headless: false,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 });
 
 // close browser and reset global variables
-after (function () {
+after(function () {
   global.browser.close();
 
   global.browser = globalVariables.browser;
