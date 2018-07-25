@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "iojs"
+cache:
+   directories:
+     - node_modules
+before_script:
+  - npm install
+script:
+  - npm start &
+  - npm test
