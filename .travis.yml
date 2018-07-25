@@ -9,3 +9,6 @@ before_script:
   - node backend/app.js &
 script:
   - npm test
+sudo: required
+addons:
+  chrome: stable
