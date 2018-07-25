@@ -5,19 +5,13 @@ const globalVariables = _.pick(global, ['browser', 'assert']);
 
 // puppeteer options
 const opts = {
-  headless: false,
-  slowMo: 100,
-  timeout: 10000,
-  args: ['--no-sandbox']
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
 };
 
 // expose variables
 before(async function () {
   global.assert = assert;
-  global.browser = await puppeteer.launch({
-    // headless: false,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
+  global.browser = await puppeteer.launch(opts);
 });
 
 // close browser and reset global variables
