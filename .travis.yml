@@ -6,6 +6,6 @@ cache:
      - node_modules
 before_script:
   - npm install
+  - node backend/app.js &
 script:
-  - npm start &
   - npm test
