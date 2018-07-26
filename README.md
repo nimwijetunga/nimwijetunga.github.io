@@ -21,7 +21,7 @@ Node.js, npm, Browser
 clone this repo
 
 ```
-git@github.com:nimwijetunga/Personal-Website.git
+git@github.com:nimwijetunga/nimwijetunga.git
 ```
 
 cd into project directory
