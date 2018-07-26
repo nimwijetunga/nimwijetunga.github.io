@@ -26,10 +26,6 @@ git@github.com:nimwijetunga/nimwijetunga.git
 
 cd into project directory
 
-```
-cd Personal-Website
-```
-
 install dependencies
 
 ```
