@@ -5,7 +5,7 @@ $(document).ready(function () {
 function get_projects() {
     let url = 'https://nim-wijetunga.lib.id/profilePost@0.1.3/';
     let project_names = {
-        "Present-Easy": "Present Easy",
+        "Crypto-Consensus": "Crypto-Consensus",
         "Infinity": "Infinity",
         "StudySpace": "Study Space",
         "Princeton-Algorithms-Part-1": "Princeton Algorithms"
