@@ -1,3 +1,5 @@
+var logoutTimer = setTimeout(function() { localStorage.clear(); }, (60 * 60 * 1000));//Cache for 24h
+
 $(document).ready(function () {
     list_projects();
 });
@@ -18,7 +20,6 @@ function get_projects() {
             data: JSON.stringify(project_names),
             dataType: 'json',
             success: function (projects) {
-                $(".container").hide();
                 if (!projects) reject(false);
                 projects = JSON.parse(JSON.stringify(projects));
                 if (projects['data']) resolve(projects);
@@ -35,9 +36,14 @@ function get_projects() {
 }
 
 async function list_projects() {
-    var projects = await get_projects().catch(function (err) { return false; });
+    var projects = JSON.parse(localStorage.getItem('projects'));
+    if(!projects){
+        projects = await get_projects().catch(function (err) { return false; });
+    }
+
     if (!projects || !projects['projects']) return;
     var template, data, html;
+
 
     //Add classes
     var class2 = ['c1', 'c2'];
@@ -48,6 +54,10 @@ async function list_projects() {
         projects['projects'][i]['id'] = id_str;
     }
 
+    localStorage.setItem('projects', JSON.stringify(projects));
+
+
+    $(".container").hide();
     template = $('#template').val();
     html = Mustache.render(template, projects);
     $('#result').html(html);
