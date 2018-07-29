@@ -29,9 +29,11 @@ module.exports = {
             Promise.reject(profile.error);
             return;
         }
+
         var projects_filt = {};
         projects_filt['projects'] = []
         var keys = Object.keys(projects);
+        
         for (var i in profile) {
             let name = profile[i]['name'];
             if (keys.includes(name)) {
@@ -44,6 +46,7 @@ module.exports = {
                 projects_filt['projects'].push(project);
             }
         }
+
         return new Promise((resolve, reject) => {
             
             if(!projects_filt || !projects_filt['projects'] || projects_filt['projects'].length != 4){
