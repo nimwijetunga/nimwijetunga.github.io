@@ -37,6 +37,7 @@ function get_projects() {
 
 async function list_projects() {
     var projects = JSON.parse(localStorage.getItem('projects'));
+
     if (!projects) {
         projects = await get_projects().catch(function (err) { return false; });
         if (!projects || !projects['projects']) return;
@@ -51,7 +52,6 @@ async function list_projects() {
 
         localStorage.setItem('projects', JSON.stringify(projects));
     }
-
 
     var template, html;
 
