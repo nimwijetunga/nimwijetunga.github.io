@@ -1,19 +1,25 @@
+#!/bin/sh
+
 setup_git() {
-  git config --global user.email "travis@travis-ci.org"
-  git config --global user.name "Travis CI"
+  git config --global user.email "vnwijetu@uwaterloo.ca"
+  git config --global user.name "nimwijetunga"
+  git remote add origin https://${GH_TOKEN}@github.com/nimwijetunga/nimwijetunga.git > /dev/null 2>&1
 }
 
 commit_website_files() {
-  git checkout master
-  git add .
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  git checkout origin master
+  git merge origin development
+  # git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
-  git remote add origin-pages https://${GH_TOKEN}@github.com/MVSE-outreach/resources.git > /dev/null 2>&1
   git push origin master
 }
 
+echo "Starting Setup"
 setup_git
+echo "Merging master with development"
 commit_website_files
+echo "Pushing to master"
 upload_files
+echo "DONE"
