@@ -7,8 +7,8 @@ setup_git() {
 }
 
 commit_website_files() {
-  git checkout origin master
-  git merge origin development
+  git checkout master
+  git merge development
   # git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
