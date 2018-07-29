@@ -8,9 +8,9 @@ addons:
 before_install:
 - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost
   &
-- git config --global user.email "nimwijetunga"
-- git config --global user.name "Travis CI"
-- chmod +x scripts/build.sh
+- git config --global user.email "vnwijetu@uwaterloo.ca"
+- git config --global user.name "nimwijetunga"
+- chmod +x scripts/push-master.sh
 cache:
   directories:
   - node_modules
