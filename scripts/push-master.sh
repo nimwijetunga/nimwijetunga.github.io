@@ -12,7 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin https://nimwijetunga:${GH_TOKEN_SHELL}@github.com/nimwijetunga/nimwijetunga.git > /dev/null 2>&1
+  git remote add origin https://${GH_TOKEN}@github.com/nimwijetunga/nimwijetunga.git > /dev/null 2>&1
   https://github.com/nimwijetunga/nimwijetunga.git
   git push --quiet --set-upstream origin master
 }
