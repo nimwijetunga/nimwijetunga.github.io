@@ -1,4 +1,4 @@
-var logoutTimer = setTimeout(function() { localStorage.clear(); }, (60 * 60 * 1000));//Cache for 24h
+var logoutTimer = setTimeout(function () { localStorage.clear(); }, (60 * 60 * 1000));//Cache for 24h
 
 $(document).ready(function () {
     list_projects();
@@ -37,25 +37,23 @@ function get_projects() {
 
 async function list_projects() {
     var projects = JSON.parse(localStorage.getItem('projects'));
-    if(!projects){
+    if (!projects) {
         projects = await get_projects().catch(function (err) { return false; });
+        if (!projects || !projects['projects']) return;
+        //Add classes
+        var class2 = ['c1', 'c2'];
+        var class3 = ['top', 'top', 'bottom', 'bottom']
+        for (var i in projects['projects']) {
+            projects['projects'][i]['img'] = '../' + projects['projects'][i]['img'];
+            let id_str = class2[i % 2] + "-" + class3[i];
+            projects['projects'][i]['id'] = id_str;
+        }
+
+        localStorage.setItem('projects', JSON.stringify(projects));
     }
 
-    if (!projects || !projects['projects']) return;
-    var template, data, html;
 
-
-    //Add classes
-    var class2 = ['c1', 'c2'];
-    var class3 = ['top', 'top', 'bottom', 'bottom']
-    for (var i in projects['projects']) {
-        projects['projects'][i]['img'] = '../' + projects['projects'][i]['img'];
-        let id_str = class2[i % 2] + "-" + class3[i];
-        projects['projects'][i]['id'] = id_str;
-    }
-
-    localStorage.setItem('projects', JSON.stringify(projects));
-
+    var template, html;
 
     $(".container").hide();
     template = $('#template').val();
