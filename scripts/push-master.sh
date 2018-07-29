@@ -8,7 +8,7 @@ setup_git() {
 commit_website_files() {
   git checkout -b master
   git add .
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER merge"
 }
 
 upload_files() {
