@@ -1,4 +1,5 @@
 var config = {
+
     type: 'bar',
     data: {
         labels: ["Web Development", "Backend Development", "Frontend Development", "Algorithm Design", "Android Development"],
@@ -36,6 +37,9 @@ var config = {
             fontSize: 18
         }
     }
+
 };
 
-bar_chart = new DrawChart('intrest_chart', config);
+if(config){
+    bar_chart = new DrawChart('intrest_chart', config);
+}
