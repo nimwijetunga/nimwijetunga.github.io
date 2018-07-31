@@ -20,7 +20,7 @@ git clone --quiet --branch=master https://${GH_TOKEN}@github.com/nimwijetunga/ni
 cd nimwijetunga
 cp -Rf $HOME/docs/* docs
 
-#add, commit and push files
+#add, commit and push files to master branch
 git add -f .
 git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
 git push -fq origin master > /dev/null
