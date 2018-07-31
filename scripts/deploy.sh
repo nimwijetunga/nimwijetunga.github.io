@@ -7,7 +7,7 @@ if [[ $TRAVIS_BRANCH == "development" && $TRAVIS_PULL_REQUEST == "false" ]]; the
 echo "Starting to update master\n"
 
 #copy data we're interested in to other place
-cp -R docs $HOME/docs
+cp -R . $HOME/website
 
 #go to home and setup git
 cd $HOME
@@ -19,7 +19,7 @@ git clone --quiet --branch=master https://${GH_TOKEN}@github.com/nimwijetunga/ni
 
 #go into directory and copy data we're interested in to that directory
 cd nimwijetunga
-cp -Rf $HOME/docs/* docs
+cp -Rf $HOME/website/* .
 
 #add, commit and push files
 git add -f .
