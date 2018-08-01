@@ -6,7 +6,7 @@ if [[ $TRAVIS_BRANCH == "development" && $TRAVIS_PULL_REQUEST == "false" ]]; the
 
 echo "Starting to update master\n"
 
-#copy only docs folder (holds website)
+#copy only docs folder (holds static website)
 cp -R docs $HOME/docs
 
 #go to home and setup git
@@ -28,5 +28,5 @@ git push -fq origin master > /dev/null
 echo "Done updating master\n"
 
 else
- echo "Skipped updating master, because build is not triggered from the master branch."
+ echo "Skipped updating master, because build is not triggered from the development branch."
 fi;

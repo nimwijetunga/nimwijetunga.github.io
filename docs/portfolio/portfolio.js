@@ -1,4 +1,4 @@
-var logoutTimer = setTimeout(function () { localStorage.clear(); }, (60 * 60 * 1000));//Cache for 24h
+// var logoutTimer = setTimeout(function () { localStorage.clear(); }, (60 * 60 * 1000));//Cache for 24h
 
 $(document).ready(function () {
     list_projects();
@@ -10,7 +10,7 @@ function get_projects() {
         "Crypto-Consensus": "Crypto-Consensus",
         "Infinity": "Infinity",
         "StudySpace": "Study Space",
-        "Princeton-Algorithms-Part-1": "Princeton Algorithms"
+        "PresentEasy": "PresentEasy"
     }
     return new Promise(function (resolve, reject) {
         $.ajax({
@@ -36,6 +36,7 @@ function get_projects() {
 }
 
 async function list_projects() {
+    localStorage.clear();
     var projects = JSON.parse(localStorage.getItem('projects'));
 
     if (!projects) {
