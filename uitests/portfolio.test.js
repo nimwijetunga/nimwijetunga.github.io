@@ -22,7 +22,7 @@ describe('Portfolio Page Tests', function () {
 
   it('should have the correct page title', async function () {
     const page_title = await page.title();
-    assert.equal(page_title, "Personal Website", `Page title ${page_title} does not match "Portfolio"`);
+    assert.equal(page_title, "Portfolio", `Page title ${page_title} does not match "Portfolio"`);
   });
 
   describe('API Tests, Page', () => {
