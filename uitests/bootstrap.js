@@ -5,6 +5,7 @@ const globalVariables = _.pick(global, ['browser', 'assert']);
 
 // puppeteer options
 const opts = {
+  // headless: false,
   args: ['--no-sandbox', '--disable-setuid-sandbox']
 };
 
