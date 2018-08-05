@@ -6,8 +6,11 @@ if [[ $TRAVIS_BRANCH == "development" && $TRAVIS_PULL_REQUEST == "false" ]]; the
 
 echo "Starting to update master\n"
 
-#copy only docs folder (holds website)
+#copy releavent folders
 cp -R docs $HOME/docs
+cp -R backend $HOME/backend
+cp -R scripts $HOME/scripts
+cp -R uitests $HOME/uitests
 
 #go to home and setup git
 cd $HOME
@@ -19,6 +22,9 @@ git clone --quiet --branch=master https://${GH_TOKEN}@github.com/nimwijetunga/ni
 #copy files to repo
 cd nimwijetunga
 cp -Rf $HOME/docs/* docs
+cp -Rf $HOME/backend/* backend
+cp -Rf $HOME/scripts/* scripts
+cp -Rf $HOME/uitests/* uitests
 
 #add, commit and push files to master branch
 git add -f .
@@ -28,5 +34,5 @@ git push -fq origin master > /dev/null
 echo "Done updating master\n"
 
 else
- echo "Skipped updating master, because build is not triggered from the master branch."
+ echo "Skipped updating master, because build is not triggered from the development branch."
 fi;
