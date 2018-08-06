@@ -5,7 +5,8 @@ $(document).ready(function () {
 });
 
 function get_projects() {
-    let url = 'https://nim-wijetunga.lib.id/profilePost@0.1.3/';
+    // let url = 'http://localhost:3000/api/portfolio'
+    let url = ' https://nim-wijetunga.lib.id/profilePost@0.1.4/';
     let project_names = {
         "Crypto-Consensus": "Crypto-Consensus",
         "Infinity": "Infinity",
