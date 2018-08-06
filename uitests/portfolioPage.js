@@ -1,3 +1,4 @@
+var post_url = 'https://nim-wijetunga.lib.id/profilePost@0.1.4/';
 
 let PortfolioPage = {
     delay: function (time) {
@@ -11,13 +12,13 @@ let PortfolioPage = {
         var req = false;
         var res = false;
         page.on('request', request => {
-          if (request.url === 'https://nim-wijetunga.lib.id/profilePost@0.1.3/') {
+          if (request.url === post_url) {
             req = request;
           }
           request.continue(request.postData);
         });
         page.on('response', async function(response) {
-          if (response.url == "https://nim-wijetunga.lib.id/profilePost@0.1.3/"){
+          if (response.url == post_url){
             res = response;
           }
         });
