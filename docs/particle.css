@@ -23,3 +23,15 @@ canvas {
     background-position: 50% 50%;
     z-index: -1;
 }
+
+/* Particle backgroung causes lag on mobile */
+
+@media only screen and (max-width: 1000px) and (min-width: 0px){
+    #particles-js {
+        display:none;
+    }
+
+    body{
+        background-color: #000000 !important;
+    }
+}
