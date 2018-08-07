@@ -26,6 +26,8 @@ before_deploy:
 - "./scripts/deploy.sh"
 deploy:
   provider: heroku
-  on: master
+  app: nimwijetunga
+  on:
+    branch: development
   api_key:
     secure: pPYuDc1lRlMWq//LITNzBj7zVzNFA2tECQ1zF/tQIHusCBJpgtLVLiEJpkO2JX+a/qGTkAyYCeHhair+dbPiXF6+QASxpbWLYr8AvAKiLDhayYopZAF1olYt6Ad0nnoxm14e5jnK/h7EvQWhGA+5RJQA43anwwpK/YmjWJ32zEyLReLQlVnEhzVUE/cmHgwCvBuLpA8mhpfVPaN6PfGcM269sF9DHoNCUyfGQ6A7N9XnMVbvlV+MCnBC2qCjLWbQgVJZJE07ToTBaZz/u/Nq+XTF3sCZTwPwq1EWVLxSAv82uSCWY1zB0C5rY/jP/0MhOiOc6bkGp/eexBxpJnnMwskYnSJ/dOcG3qCSaiGdSDWx46J7NWroJIyRbqnKj4e1yVGLPB44BVZ4rlOIKEXDnase/+OA7jGJ9sAEQGV8wz+5YwQ5MExgd5EdOjmSbk/ZLQgOq4H0s55z752veARCRvKpZSyGNcGMSuKOeCqiAM0W0rirQ5VXRCln8wPuzzBTuDBYF8sFjgCh2G9n2CoOcBu1WAOiectuWbhS/xXCv5k0O7XvbGwmcWHufXtpRiewnYOxL28U9Ya8HbaTZBoC3EgTOk7+jhVqsCivAKJ0sU4nu6FL9Es8b7r8jgX6bOH3gs6YElw2L2iRq//DWbp7QFYC/YZ+MDquTHhMLmuNxs4=
