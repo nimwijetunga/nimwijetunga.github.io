@@ -1,3 +1,7 @@
+const PortfolioPage = require('./portfolioPage.js');
+
+var card_selectors = ['#c1-top', '#c2-top', '#c1-bottom', '#c2-bottom'];
+
 describe('Portfolio Page Tests', function () {
   let page;
   let req;
@@ -7,7 +11,7 @@ describe('Portfolio Page Tests', function () {
   before(async function () {
     page = await browser.newPage();
     await page.goto('http://localhost:3000/portfolio/portfolio');
-    net_stack = await get_post_req(page);
+    net_stack = await PortfolioPage.get_post_req(page);
     req = net_stack[0];
     res = net_stack[1];
   });
@@ -18,71 +22,64 @@ describe('Portfolio Page Tests', function () {
 
   it('should have the correct page title', async function () {
     const page_title = await page.title();
-    assert.equal(page_title, "Personal Website", `Page title ${page_title} does not match "Portfolio"`);
+    assert.equal(page_title, "Portfolio", `Page title ${page_title} does not match "Portfolio"`);
   });
 
-  it('should make a post request', async function () {
-    assert.notEqual(req, false, `Page does not make post request for portfolio data`);
-  });
+  describe('API Tests, Page', () => {
+    it('should make a post request', async function () {
+      assert.notEqual(req, false, `Page does not make post request for portfolio data`);
+    });
 
-  it('should contain post body of type object', async function () {
-    var req_correct = await post_req_type_correct(req);
-    assert.equal(req_correct, true, `Page does not make post request with body`);
-  });
+    it('should contain post body of type object', async function () {
+      var req_correct = await PortfolioPage.post_req_type_correct(req);
+      assert.equal(req_correct, true, `Page does not make post request with body`);
+    });
 
-  it('should contain response with status 200', async function () {
-    assert.equal(res.status, 200, `Page post request does not have status 200`);
-  });
+    it('should contain response with status 200', async function () {
+      assert.equal(res.status, 200, `Page post request does not have status 200`);
+    });
 
-  it('should contain response body of length 4', async function () {
-    var body = JSON.parse(await res.text());
-    assert.equal(body.projects.length, 4, `Page does not have response of length 4`);
-  });
-  
-  it('should contain response body with required fields', async function () {
-    var body = JSON.parse(await res.text());
-    var projects = body['projects'];
-    assert.equal(has_required_fields(projects), true, `Response does not contain required fields`);
-  });
+    it('should contain response body of length 4', async function () {
+      var body = JSON.parse(await res.text());
+      assert.equal(body.projects.length, 4, `Page does not have response of length 4`);
+    });
 
+    it('should contain response body with required fields', async function () {
+      var body = JSON.parse(await res.text());
+      var projects = body['projects'];
+      assert.equal(PortfolioPage.has_required_fields(projects), true, `Response does not contain required fields`);
+    });
+  })
+
+  describe('Cards Loaded Tests', () => {
+    card_selectors.forEach(selector => {
+      describe(`card: ${selector}`, () => {
+        it(`should have view project button without empty href`, async function () {
+          var href = await PortfolioPage.get_project_href(page, selector);
+          assert.isNotEmpty(href, `href : ${href} is empty`);
+        })
+
+        it(`should have non-empty title`, async function () {
+          var title = await PortfolioPage.get_project_title(page, selector);
+          assert.isNotEmpty(title, `Title : ${title} is empty`);
+        })
+
+        it(`should have non-empty image src`, async function () {
+          var img = await PortfolioPage.get_img_properties(page, selector);
+          assert.isNotEmpty(img['src'], `Src: ${img['src']} is empty`);
+        })
+
+        it(`should have image height`, async function () {
+          var img = await PortfolioPage.get_img_properties(page, selector);
+          assert.isTrue(img['height'] > 0, `Height: ${img['height']} was not greater than 0`);
+        })
+
+        it(`should have image width`, async function () {
+          var img = await PortfolioPage.get_img_properties(page, selector);
+          assert.isTrue(img['width'] > 0, `Width: ${img['width']} was not greater than 0`);
+        })
+
+      })
+    })
+  })
 });
-
-function delay(time) {
-  return new Promise(function(resolve) { 
-      setTimeout(resolve, time)
-  });
-}
-
-async function get_post_req(page) {
-  await page.setRequestInterception(true);
-  var req = false;
-  var res = false;
-  page.on('request', request => {
-    if (request.url === 'https://nim-wijetunga.lib.id/profilePost@0.1.3/') {
-      req = request;
-    }
-    request.continue(request.postData);
-  });
-  page.on('response', async function(response) {
-    if (response.url == "https://nim-wijetunga.lib.id/profilePost@0.1.3/"){
-      res = response;
-    }
-  });
-  await delay(4000);
-  return [req, res];
-}
-
-async function post_req_type_correct(request) {
-  let post_data = request.postData;
-  return (typeof post_data != "undefined" && typeof post_data != "object");
-}
-
-function has_required_fields(projects){
-
-  let has_req_fields = projects.every(project => {
-    return (typeof project['name'] != "undefined"  && typeof project['desc'] != "undefined" && typeof project['url'] != "undefined"  && typeof project['img'] != "undefined" );
-  });
-
-  return has_req_fields;
-    
-}
