@@ -5,8 +5,11 @@ $(document).ready(function () {
 });
 
 function get_projects() {
-    // let url = 'http://localhost:3000/api/portfolio'
-    let url = ' https://nim-wijetunga.lib.id/profilePost@0.1.4/';
+    let host = window.location.host;
+    let protocol = location.protocol;
+    let url = protocol + '//' + host + '/api/portfolio';
+    console.log(url);
+    // let url = ' https://nim-wijetunga.lib.id/profilePost@0.1.4/'; //gh-pages request url (no server)
     let project_names = {
         "Crypto-Consensus": "Crypto-Consensus",
         "Infinity": "Infinity",
@@ -21,6 +24,7 @@ function get_projects() {
             data: JSON.stringify(project_names),
             dataType: 'json',
             success: function (projects) {
+                console.log(projects);
                 if (!projects) reject(false);
                 projects = JSON.parse(JSON.stringify(projects));
                 if (projects['data']) resolve(projects);

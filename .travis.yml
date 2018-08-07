@@ -22,8 +22,8 @@ branches:
   - development
 env:
   secure: V8EIgYlOfw+fIO04ZkBB+0y8ecTAwZFPdeiYsCLrRDcBxuXgIC4kLT7aJk5Eicgdd4IbdN5PSlq2vcYVLzbmKkzQxoTvEO7ZwIOhuwcdmrg6YD8B5Nln4k1u3glF0zd4JeKkq8X7f2jf4zlhm3yR+R8QzixkuT5ttVuz1An0e+UYFQAQ8s3QK5Jq29cywiNCNJyo8LxJRnEqJ3bArkFbl02QvqC8hkNESOyxLp4NIY8p3ABzed2zG0KTOEmEfF2KV+jIXbtPnVNIkxICD77/B85HISVTiLaNR2Y7eGdrQMElbQ+KEpDZluuIgPN2PazDvfFQTWfWNNOs1mkqNgKS3/NuaWRs3lRFrvOb4PBUwT2rgQjpQ1HZswudOa5X8fa7Xvpk+rsbo0UsIqTBtmUNhv6uapwnSioBE3XnlO7IbzPNNLrQ1b8Z61rFQmYetbGNUWxMOf4pKOelv5dnTfP2Y4whLTzRECuq06iOEjmO4TJERI5WhXqf5j+RulEOzN50x2VreB+MM6lA1jHfQeymSmFuasGYP2/9QlGvR0QTdqvA8pyfAOwxaWVvkJf/ljHVQPl+dl0t8D/nOmuOo8ypo3+HcrVM3AXMev5JBQ1Lgeo1P1wp262eQdSDX95dGKKG9LOqio9hCdmcu8FsOjokwlGRneTrCQhqeunT7SDMRKQ=
-after_success:
-- "./scripts/deploy.sh"
+# after_success: #Testing some heroku specific server routing so keeping master branch clean (as gh-pages runs off master)
+# - "./scripts/deploy.sh"
 deploy:
   provider: heroku
   app: nimwijetunga
