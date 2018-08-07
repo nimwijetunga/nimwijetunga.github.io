@@ -33,4 +33,4 @@ app.set('port', (process.env.PORT || 3000));
 
 app.post('/api/portfolio', [send_profile]);
 
-app.listen(3000, () => console.log('App started on port: ' + app.get('port')))
+app.listen(process.env.PORT || 3000, () => console.log('App started on port: ' + app.get('port')))
