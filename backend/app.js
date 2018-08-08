@@ -4,11 +4,12 @@ const projects = require('./projects.js');
 const default_data = require('./default_projects.json');
 const bodyParser = require('body-parser');
 
+require('heroku-self-ping')(process.env.heroku_url);
+
 const root = {root:'./docs'}
 
 var express_options = {
     extensions: ['htm', 'html'],
-    // redirect:false
 }
 
 async function send_profile(req, res) {
