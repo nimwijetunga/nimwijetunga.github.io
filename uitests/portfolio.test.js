@@ -10,7 +10,7 @@ describe('Portfolio Page Tests', function () {
 
   before(async function () {
     page = await browser.newPage();
-    await page.goto('http://localhost:3000/portfolio/portfolio');
+    await page.goto('http://localhost:3000/portfolio/');
     net_stack = await PortfolioPage.get_post_req(page);
     req = net_stack[0];
     res = net_stack[1];
