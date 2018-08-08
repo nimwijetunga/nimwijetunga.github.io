@@ -24,32 +24,30 @@ async function get_profile() {
 
 module.exports = {
     get_projects: async function (projects) {
-        var profile = await get_profile().catch((err) => {return {error:err}});
-        if(profile.error){
-            Promise.reject(profile.error);
-            return;
-        }
-
-        var projects_filt = {};
-        projects_filt['projects'] = []
-        var keys = Object.keys(projects);
-        
-        for (var i in profile) {
-            let name = profile[i]['name'];
-            if (keys.includes(name)) {
-                let project = {
-                    name: projects[name],
-                    desc: profile[i]['description'],
-                    url: profile[i]['html_url'],
-                    img: 'res/' + name + '.png'
-                };
-                projects_filt['projects'].push(project);
-            }
-        }
-
+        var profile = await get_profile().catch((err) => { return false });
         return new Promise((resolve, reject) => {
-            
-            if(!projects_filt || !projects_filt['projects'] || projects_filt['projects'].length != 4){
+
+            if (!profile) {
+                reject(false);
+            }
+
+            var projects_filt = {};
+            projects_filt['projects'] = []
+            var keys = Object.keys(projects);
+
+            for (var i in profile) {
+                let name = profile[i]['name'];
+                if (keys.includes(name)) {
+                    let project = {
+                        name: projects[name],
+                        desc: profile[i]['description'],
+                        url: profile[i]['html_url'],
+                        img: 'res/' + name + '.png'
+                    };
+                    projects_filt['projects'].push(project);
+                }
+            }
+            if (!projects_filt || !projects_filt['projects'] || projects_filt['projects'].length != 4) {
                 reject(false);
             }
             resolve(projects_filt);
