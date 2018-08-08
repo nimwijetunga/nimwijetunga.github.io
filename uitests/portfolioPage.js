@@ -13,7 +13,6 @@ let PortfolioPage = {
         var req = false;
         var res = false;
         page.on('request', request => {
-            console.log(request.url);
           if (request.url === post_url) {
             req = request;
           }
