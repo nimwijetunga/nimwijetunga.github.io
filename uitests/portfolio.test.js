@@ -26,11 +26,11 @@ describe('Portfolio Page Tests', function () {
   });
 
   describe('API Tests, Page', () => {
-    it('should make a post request', async function () {
+    xit('should make a post request', async function () {
       assert.notEqual(req, false, `Page does not make post request for portfolio data`);
     });
 
-    it('should contain post body of type object', async function () {
+    xit('should contain post body of type object', async function () {
       var req_correct = await PortfolioPage.post_req_type_correct(req);
       assert.equal(req_correct, true, `Page does not make post request with body`);
     });

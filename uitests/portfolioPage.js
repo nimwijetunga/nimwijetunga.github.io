@@ -1,4 +1,5 @@
-var post_url = 'https://nim-wijetunga.lib.id/profilePost@0.1.4/';
+// var post_url = 'https://nim-wijetunga.lib.id/profilePost@0.1.4/';
+var post_url = 'http://localhost:3000/api/portfolio';
 
 let PortfolioPage = {
     delay: function (time) {
@@ -12,12 +13,13 @@ let PortfolioPage = {
         var req = false;
         var res = false;
         page.on('request', request => {
+            console.log(request.url);
           if (request.url === post_url) {
             req = request;
           }
           request.continue(request.postData);
         });
-        page.on('response', async function(response) {
+        page.on('response', response => {
           if (response.url == post_url){
             res = response;
           }
