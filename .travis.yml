@@ -22,12 +22,12 @@ branches:
   - development
 env:
   secure: V8EIgYlOfw+fIO04ZkBB+0y8ecTAwZFPdeiYsCLrRDcBxuXgIC4kLT7aJk5Eicgdd4IbdN5PSlq2vcYVLzbmKkzQxoTvEO7ZwIOhuwcdmrg6YD8B5Nln4k1u3glF0zd4JeKkq8X7f2jf4zlhm3yR+R8QzixkuT5ttVuz1An0e+UYFQAQ8s3QK5Jq29cywiNCNJyo8LxJRnEqJ3bArkFbl02QvqC8hkNESOyxLp4NIY8p3ABzed2zG0KTOEmEfF2KV+jIXbtPnVNIkxICD77/B85HISVTiLaNR2Y7eGdrQMElbQ+KEpDZluuIgPN2PazDvfFQTWfWNNOs1mkqNgKS3/NuaWRs3lRFrvOb4PBUwT2rgQjpQ1HZswudOa5X8fa7Xvpk+rsbo0UsIqTBtmUNhv6uapwnSioBE3XnlO7IbzPNNLrQ1b8Z61rFQmYetbGNUWxMOf4pKOelv5dnTfP2Y4whLTzRECuq06iOEjmO4TJERI5WhXqf5j+RulEOzN50x2VreB+MM6lA1jHfQeymSmFuasGYP2/9QlGvR0QTdqvA8pyfAOwxaWVvkJf/ljHVQPl+dl0t8D/nOmuOo8ypo3+HcrVM3AXMev5JBQ1Lgeo1P1wp262eQdSDX95dGKKG9LOqio9hCdmcu8FsOjokwlGRneTrCQhqeunT7SDMRKQ=
-# after_success: #Testing some heroku specific server routing so keeping master branch clean (as gh-pages runs off master)
-# - "./scripts/deploy.sh"
-deploy:
-  provider: heroku
-  app: nimwijetunga
-  on:
-    branch: development
-  api_key:
-    secure: pPYuDc1lRlMWq//LITNzBj7zVzNFA2tECQ1zF/tQIHusCBJpgtLVLiEJpkO2JX+a/qGTkAyYCeHhair+dbPiXF6+QASxpbWLYr8AvAKiLDhayYopZAF1olYt6Ad0nnoxm14e5jnK/h7EvQWhGA+5RJQA43anwwpK/YmjWJ32zEyLReLQlVnEhzVUE/cmHgwCvBuLpA8mhpfVPaN6PfGcM269sF9DHoNCUyfGQ6A7N9XnMVbvlV+MCnBC2qCjLWbQgVJZJE07ToTBaZz/u/Nq+XTF3sCZTwPwq1EWVLxSAv82uSCWY1zB0C5rY/jP/0MhOiOc6bkGp/eexBxpJnnMwskYnSJ/dOcG3qCSaiGdSDWx46J7NWroJIyRbqnKj4e1yVGLPB44BVZ4rlOIKEXDnase/+OA7jGJ9sAEQGV8wz+5YwQ5MExgd5EdOjmSbk/ZLQgOq4H0s55z752veARCRvKpZSyGNcGMSuKOeCqiAM0W0rirQ5VXRCln8wPuzzBTuDBYF8sFjgCh2G9n2CoOcBu1WAOiectuWbhS/xXCv5k0O7XvbGwmcWHufXtpRiewnYOxL28U9Ya8HbaTZBoC3EgTOk7+jhVqsCivAKJ0sU4nu6FL9Es8b7r8jgX6bOH3gs6YElw2L2iRq//DWbp7QFYC/YZ+MDquTHhMLmuNxs4=
+after_success: #Testing some heroku specific server routing so keeping master branch clean (as gh-pages runs off master)
+- "./scripts/deploy.sh"
+# deploy:
+#   provider: heroku
+#   app: nimwijetunga
+#   on:
+#     branch: development
+#   api_key:
+#     secure: pPYuDc1lRlMWq//LITNzBj7zVzNFA2tECQ1zF/tQIHusCBJpgtLVLiEJpkO2JX+a/qGTkAyYCeHhair+dbPiXF6+QASxpbWLYr8AvAKiLDhayYopZAF1olYt6Ad0nnoxm14e5jnK/h7EvQWhGA+5RJQA43anwwpK/YmjWJ32zEyLReLQlVnEhzVUE/cmHgwCvBuLpA8mhpfVPaN6PfGcM269sF9DHoNCUyfGQ6A7N9XnMVbvlV+MCnBC2qCjLWbQgVJZJE07ToTBaZz/u/Nq+XTF3sCZTwPwq1EWVLxSAv82uSCWY1zB0C5rY/jP/0MhOiOc6bkGp/eexBxpJnnMwskYnSJ/dOcG3qCSaiGdSDWx46J7NWroJIyRbqnKj4e1yVGLPB44BVZ4rlOIKEXDnase/+OA7jGJ9sAEQGV8wz+5YwQ5MExgd5EdOjmSbk/ZLQgOq4H0s55z752veARCRvKpZSyGNcGMSuKOeCqiAM0W0rirQ5VXRCln8wPuzzBTuDBYF8sFjgCh2G9n2CoOcBu1WAOiectuWbhS/xXCv5k0O7XvbGwmcWHufXtpRiewnYOxL28U9Ya8HbaTZBoC3EgTOk7+jhVqsCivAKJ0sU4nu6FL9Es8b7r8jgX6bOH3gs6YElw2L2iRq//DWbp7QFYC/YZ+MDquTHhMLmuNxs4=
