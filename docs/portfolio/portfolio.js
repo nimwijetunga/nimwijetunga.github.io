@@ -5,11 +5,11 @@ $(document).ready(function () {
 });
 
 function get_projects() {
-    let host = window.location.host;
-    let protocol = location.protocol;
-    let url = protocol + '//' + host + '/api/portfolio';
-    console.log(url);
-    // let url = ' https://nim-wijetunga.lib.id/profilePost@0.1.4/'; //gh-pages request url (no server)
+    // let host = window.location.host;
+    // let protocol = location.protocol;
+    // let url = protocol + '//' + host + '/api/portfolio';
+    // console.log(url);
+    let url = 'https://nim-wijetunga.lib.id/profilePost@0.1.4/'; //gh-pages request url (no server)
     let project_names = {
         "Crypto-Consensus": "Crypto-Consensus",
         "Infinity": "Infinity",

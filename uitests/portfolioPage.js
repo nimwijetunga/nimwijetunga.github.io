@@ -1,5 +1,5 @@
-// var post_url = 'https://nim-wijetunga.lib.id/profilePost@0.1.4/';
-var post_url = 'http://localhost:3000/api/portfolio';
+var post_url = 'https://nim-wijetunga.lib.id/profilePost@0.1.4/';
+// var post_url = 'http://localhost:3000/api/portfolio';
 
 let PortfolioPage = {
     delay: function (time) {
