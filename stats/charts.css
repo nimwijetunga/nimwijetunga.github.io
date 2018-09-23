@@ -1,0 +1,28 @@
+@media only screen and (max-width: 1000px) and (min-width: 0px) {
+    .home {
+        font-size: 43px !important;
+    }
+}
+
+#lang_chart{
+    z-index: 999;
+    position: absolute;
+    top:15%;
+    pointer-events: fill;
+}
+
+#intrest_chart{
+    z-index: 999;
+    position: absolute;
+    top:70%;
+    pointer-events: fill;
+}
+
+.home {
+    z-index: 999;
+    position: absolute;
+    font-size: 18px !important;
+    left: 3%;
+    top: 3%;
+    font-family: inherit;
+}
