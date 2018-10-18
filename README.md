@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nimwijetunga/nimwijetunga.svg?branch=master)](https://travis-ci.org/nimwijetunga/nimwijetunga)
+[![Build Status](https://travis-ci.org/nimwijetunga/nimwijetunga.svg?branch=master)](https://travis-ci.org/nimwijetunga/nimwijetunga.github.io)
 ![node (scoped with tag)](http://img.shields.io/badge/node-9.4.0-brightgreen.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
