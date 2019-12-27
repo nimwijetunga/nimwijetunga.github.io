@@ -142,6 +142,7 @@ h4 {
     position: absolute;
     left: 46%;
     padding: 10px 50px;
+    width: 220px !important;
 }
 
 #resume {
